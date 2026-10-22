@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kashvi Bhardwaj | Data Science, ML and AI Engineering Portfolio</title>
+<meta name="description" content="Kashvi Bhardwaj, Computer Science undergraduate at SRMIST building data analytics, machine learning and LLM applications: RAG, LangGraph agents, SQL analytics and dashboards.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kashvi Bhardwaj | Data, ML and AI Portfolio">
+<meta property="og:description" content="Agentic AI, RAG systems, SQL analytics and predictive dashboards. Projects, experience and resume.">
+<meta name="theme-color" content="#0A0F1E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0F1E'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%23F59E0B'%3EKB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#0F1626;--card:#141B2D;--violet:#7C3AED;--violet-lt:#B388FF;--gold:#F59E0B;--ice:#F0F4FF;--slate:#A3B0C4;--line:rgba(124,58,237,.3);
+--head:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;--body:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+--s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:3rem;--s5:5rem;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--navy);color:var(--ice);font:400 1rem/1.65 var(--body);overflow-x:hidden}
+a{color:var(--violet-lt)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:#000;padding:.5rem 1rem;z-index:100}.skip:focus{left:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--s3)}
+section{padding:var(--s5) 0}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.5vw,2.1rem);margin-bottom:var(--s3)}
+h3{font-size:1.2rem}
+p{max-width:68ch;color:var(--slate)}
+.lead{color:var(--ice)}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(10,15,30,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:var(--s2)}
+.logo{font:700 1.2rem var(--head);color:var(--gold);text-decoration:none}
+nav ul{display:flex;gap:var(--s3);list-style:none;padding:0}
+nav ul a{color:var(--slate);text-decoration:none;font-size:.95rem;padding:.4rem 0}
+nav ul a:hover,nav ul a[aria-current]{color:var(--ice)}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--ice);padding:.45rem .8rem;border-radius:8px;font:inherit}
+@media(max-width:760px){#menu{display:block}
+nav ul{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--navy2);padding:var(--s2) var(--s3);gap:.25rem;border-bottom:1px solid var(--line)}
+nav ul.open{display:flex}nav ul a{display:block;padding:.6rem 0}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.25rem;border-radius:10px;font:600 .95rem var(--body);text-decoration:none;border:1px solid var(--line);color:var(--ice);background:transparent}
+.btn:hover{border-color:var(--violet-lt)}
+.btn.primary{background:var(--violet);border-color:var(--violet);color:#fff}.btn.primary:hover{background:#6D28D9}
+.btn.gold{border-color:var(--gold);color:var(--gold)}
+.btn.sm{padding:.45rem .9rem;font-size:.875rem}
+.row{display:flex;flex-wrap:wrap;gap:var(--s2)}
+/* hero */
+.hero{padding:var(--s5) 0 var(--s4)}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:var(--s1) 0 var(--s2)}
+.name{color:var(--gold);font:600 1.05rem var(--head)}
+.roles{font:500 1.15rem var(--head);color:var(--violet-lt);min-height:1.9em;margin-bottom:var(--s2)}
+.roles .caret{border-right:2px solid var(--gold);margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero p{margin-bottom:var(--s2)}
+.edu{color:var(--ice);margin-bottom:var(--s3)}
+.hero .row{margin-bottom:var(--s3)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--s2);margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line)}
+.stats b{display:block;font:700 1.7rem var(--head);color:var(--gold)}.stats span{font-size:.85rem;color:var(--slate)}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
+.grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:var(--s2) 0}
+.tags li{font-size:.78rem;padding:.2rem .6rem;border-radius:999px;background:rgba(124,58,237,.16);color:#D8C7FF;border:1px solid var(--line)}
+.skills h3{margin-bottom:0;color:var(--gold);font-size:1.05rem}.skills .tags{margin-bottom:0}
+/* projects */
+.feat{display:grid;gap:var(--s3);margin-bottom:var(--s3)}
+.feat .card{border-left:4px solid var(--gold);padding:var(--s3) var(--s3) var(--s3)}
+.feat h3{font-size:1.5rem;margin-bottom:var(--s1)}
+.kicker{color:var(--gold);font-size:.9rem;font-weight:600;margin-bottom:var(--s1)}
+ul.pts{padding-left:1.2rem;color:var(--slate);margin:var(--s1) 0}ul.pts li{margin:.3rem 0}
+.metrics{display:flex;flex-wrap:wrap;gap:var(--s3);margin:var(--s2) 0}
+.metrics div{min-width:90px}.metrics b{display:block;font:700 1.4rem var(--head);color:var(--ice)}.metrics span{font-size:.8rem;color:var(--slate)}
+.note{font-size:.85rem;border-left:3px solid var(--violet);padding:.25rem .8rem;color:var(--slate);margin:var(--s2) 0}
+.flow{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem;margin:var(--s2) 0;counter-reset:n}
+.flow li{background:var(--navy2);border:1px solid var(--line);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;color:var(--ice);position:relative}
+.flow li:not(:last-child)::after{content:"\2192";color:var(--gold);margin-left:.6rem}
+.flow li.end{border-color:var(--gold)}
+details{margin-top:var(--s2);border-top:1px solid var(--line);padding-top:var(--s2)}
+summary{cursor:pointer;font-weight:600;color:var(--violet-lt);list-style:none;display:inline-block;padding:.3rem 0}
+summary::-webkit-details-marker{display:none}summary::before{content:"+ ";color:var(--gold)}
+details[open] summary::before{content:"\2212 "}
+details h4{font:600 .95rem var(--head);color:var(--ice);margin:var(--s2) 0 .2rem}
+details p{font-size:.95rem}
+.img{display:none;margin-top:var(--s2);max-width:100%;border-radius:10px;border:1px solid var(--line)}
+/* timeline / certs / contact */
+.tl{border-left:2px solid var(--violet);padding-left:var(--s3)}
+.tl .meta{color:var(--gold);font-size:.9rem;font-weight:600}
+.certs .card b{display:block;font-family:var(--head);margin-bottom:.3rem}.certs .card span{color:var(--slate);font-size:.9rem}
+.build .card h3{font-size:1.05rem;margin-bottom:.3rem}.build p{font-size:.93rem}
+.contact a.link{color:var(--ice)}
+footer{border-top:1px solid var(--line);padding:var(--s3) 0;color:var(--slate);font-size:.85rem}
+@media(min-width:900px){.feat{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.roles .caret{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="wrap"><nav aria-label="Primary">
+<a class="logo" href="#top" aria-label="Kashvi Bhardwaj, home">KB</a>
+<button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+<ul id="links">
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<main id="main">
+<section class="hero" id="top"><div class="wrap">
+<p class="name">Kashvi Bhardwaj</p>
+<h1>Building intelligent systems from data.</h1>
+<div class="roles" aria-label="Data Scientist, AI Engineer, ML Developer"><span id="role" aria-hidden="true">Data Scientist</span><span class="caret" aria-hidden="true"></span></div>
+<p class="lead">I build data analytics, machine learning and LLM applications in Python and SQL, from data modeling and retrieval to APIs and dashboards.</p>
+<p class="edu">B.Tech Computer Science Engineering, SRM Institute of Science and Technology, Chennai. CGPA <span data-gpa>9.11</span>/10, expected graduation January 2027.</p>
+<div class="row">
+<a class="btn primary" href="#projects">Explore my projects</a>
+<a class="btn gold" href="assets/resume.pdf" download>Download resume (PDF)</a>
+<a class="btn" href="#contact">Contact me</a>
+</div>
+<div class="row">
+<a class="btn sm" href="https://linkedin.com/in/kashvi-bhardwaj" target="_blank" rel="noopener noreferrer" aria-label="Kashvi on LinkedIn (opens in new tab)">LinkedIn</a>
+<a class="btn sm" href="https://github.com/kashvi-b" target="_blank" rel="noopener noreferrer" aria-label="Kashvi on GitHub (opens in new tab)">GitHub</a>
+</div>
+<div class="stats" aria-label="Project highlights">
+<div><b>7</b><span>agent stages in MedGraph</span></div>
+<div><b>78K+</b><span>records in the supply chain star schema</span></div>
+<div><b>0.81</b><span>AUC, delay classifier</span></div>
+<div><b>15</b><span>SQL queries with CTEs and window functions</span></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About</h2>
+<p class="lead">I'm a Computer Science undergraduate and SAP Certified Data Analyst who likes turning messy data into systems people can actually use.</p>
+<p style="margin-top:var(--s2)">My work covers Python, SQL, machine learning and LLM-powered applications, including RAG pipelines and LangGraph agents. I design SQL star schemas, validate data, build predictive models, and ship them behind FastAPI endpoints or Streamlit dashboards. I care about reliability: the agents I build are designed to decline when the data cannot support an answer.</p>
+<p style="margin-top:var(--s2)">Currently in my final year at SRMIST (CGPA <span data-gpa>9.11</span>/10, expected January 2027), I'm looking for entry-level and internship roles in data science, analytics and ML/AI engineering.</p>
+</div></section>
+
+<section id="build"><div class="wrap build">
+<h2>What I build</h2>
+<div class="grid">
+<div class="card"><h3>AI and RAG applications</h3><p>Question answering over documents and video with embeddings and vector search.</p></div>
+<div class="card"><h3>Agentic workflows</h3><p>State-machine agents with verification and refusal paths.</p></div>
+<div class="card"><h3>Predictive analytics</h3><p>Classification and regression models with validated features.</p></div>
+<div class="card"><h3>Data pipelines and dashboards</h3><p>SQL analytics, star schemas and Streamlit dashboards.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap skills">
+<h2>Technical skills</h2>
+<div class="grid">
+<div class="card"><h3>Programming and SQL</h3><ul class="tags"><li>Python</li><li>SQL</li><li>C</li><li>CTEs</li><li>Window functions</li><li>Joins</li><li>Aggregations</li></ul></div>
+<div class="card"><h3>AI, ML and agentic AI</h3><ul class="tags"><li>RAG</li><li>LLMs</li><li>LangChain</li><li>LangGraph</li><li>Ollama</li><li>Whisper</li><li>FAISS</li><li>Sentence Transformers</li><li>Scikit-learn</li><li>Feature engineering</li><li>Gradient Boosting</li><li>XGBoost</li><li>LightGBM</li><li>K-Means</li><li>SHAP</li></ul></div>
+<div class="card"><h3>Data analytics</h3><ul class="tags"><li>Pandas</li><li>NumPy</li><li>EDA</li><li>Data cleaning</li><li>ETL</li><li>Data validation</li><li>Statistical analysis</li><li>KPI reporting</li><li>Root cause analysis</li></ul></div>
+<div class="card"><h3>Databases and modeling</h3><ul class="tags"><li>PostgreSQL</li><li>pgvector</li><li>MySQL</li><li>SQLite</li><li>SQLAlchemy</li><li>Star schema</li><li>Data modeling</li></ul></div>
+<div class="card"><h3>Visualization, backend and tools</h3><ul class="tags"><li>Tableau</li><li>Power BI</li><li>Streamlit</li><li>Plotly</li><li>Matplotlib</li><li>FastAPI</li><li>Docker</li><li>AWS Bedrock</li><li>Git</li><li>GitHub</li><li>Jupyter</li><li>Google Colab</li></ul></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="feat">
+<article class="card">
+<p class="kicker">Featured: agentic AI</p>
+<h3>MedGraph: agentic clinical document intelligence</h3>
+<p>A LangGraph agent that answers questions over a public healthcare-policy and drug-label corpus, and refuses when the corpus cannot support an answer.</p>
+<ul class="tags"><li>Python</li><li>LangGraph</li><li>LangChain</li><li>Pydantic v2</li><li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>Docker</li></ul>
+<ul class="pts"><li>Seven-stage state machine: scrub, classify, extract, retrieve, synthesize, verify, refuse.</li><li>Typed models with Pydantic v2 and FastAPI endpoints.</li><li>Vector retrieval on PostgreSQL with pgvector, containerized with Docker.</li></ul>
+<ol class="flow" aria-label="MedGraph workflow, conceptual"><li>Corpus</li><li>Input processing</li><li>Classify and extract</li><li>Retrieve</li><li>Synthesize</li><li>Verify</li><li class="end">Answer or refuse</li></ol>
+<p class="note">Conceptual workflow. Not every request follows an identical path. MedGraph is a document question-answering project, not a clinically validated diagnostic system.</p>
+<div class="row"><a class="btn sm primary" href="https://github.com/kashvi-b/MedGraph" target="_blank" rel="noopener noreferrer" aria-label="View MedGraph code on GitHub (opens in new tab)">View code</a></div>
+<details><summary>View details</summary>
+<h4>Problem</h4><p>Answers over healthcare policy and drug labels must be grounded. A plausible but unsupported answer is worse than no answer.</p>
+<h4>Approach</h4><p>The agent scrubs input, classifies the question, extracts key fields, retrieves passages from pgvector, drafts an answer, then verifies it against the retrieved evidence. If support is missing, it takes the refusal path.</p>
+<h4>Technical choices</h4><p>LangGraph makes each stage explicit and testable. Pydantic v2 keeps data between stages typed. FastAPI exposes the agent, and Docker packages it with its database.</p>
+<h4>Limitations</h4><p>Built on a public corpus for demonstration. No clinical validation has been performed.</p>
+<img class="img" src="assets/images/medgraph.png" alt="MedGraph screenshot" onload="this.style.display='block'" onerror="this.remove()">
+</details>
+</article>
+
+<article class="card">
+<p class="kicker">Featured: data analytics and ML</p>
+<h3>Supply Chain Disruption Intelligence Platform</h3>
+<p>SQL analytics, delay prediction and supplier risk scoring on a six-table star schema, delivered as a four-page dashboard.</p>
+<ul class="tags"><li>SQLite</li><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Streamlit</li><li>Plotly</li></ul>
+<div class="metrics"><div><b>78K+</b><span>records</span></div><div><b>5,000+</b><span>shipments</span></div><div><b>29.8%</b><span>delay rate found</span></div><div><b>0.81</b><span>AUC</span></div><div><b>~11 days</b><span>severity MAE</span></div></div>
+<ol class="flow" aria-label="Supply chain workflow, conceptual"><li>Data</li><li>SQL analytics</li><li>Validation and features</li><li>Risk scoring</li><li class="end">Streamlit dashboard</li></ol>
+<p class="note">Simulated business case on synthetic data: $11.4M value at risk and $6M potential annual savings across 15 risk-scored suppliers. These are modeled estimates, not real company results.</p>
+<div class="row"><a class="btn sm primary" href="https://github.com/kashvi-b/supply-chain-intelligence" target="_blank" rel="noopener noreferrer" aria-label="View supply chain project code on GitHub (opens in new tab)">View code</a><a class="btn sm" href="https://supply-chain-intelligence-kb.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Open supply chain dashboard live demo (opens in new tab)">Live demo</a></div>
+<details><summary>View details</summary>
+<h4>Problem</h4><p>Understand where and why shipments are delayed, and which suppliers carry the most risk.</p>
+<h4>Approach</h4><p>Designed the star schema, wrote 15 SQL queries using CTEs and LAG, NTILE and RANK for delivery, supplier and inventory KPIs, then ran validation, EDA and root-cause analysis in Python.</p>
+<h4>Models</h4><p>A Gradient Boosting classifier predicts delay (AUC 0.81) and a severity model estimates delay length (MAE about 11 days). Both feed shipment risk scores and supplier scorecards.</p>
+<h4>Limitations</h4><p>All data is synthetic, so the financial figures illustrate a method, not measured outcomes.</p>
+<img class="img" src="assets/images/supply-chain.png" alt="Supply chain dashboard screenshot" onload="this.style.display='block'" onerror="this.remove()">
+</details>
+</article>
+</div>
+
+<div class="grid">
+<article class="card"><h3>AI Video Summarizer Pro</h3>
+<p style="margin-top:var(--s1)">Streamlit app that runs local LLMs through Ollama to summarize YouTube videos and answer questions about them.</p>
+<ul class="tags"><li>Python</li><li>Streamlit</li><li>Ollama</li><li>Whisper</li><li>FAISS</li><li>Sentence Transformers</li></ul>
+<ul class="pts"><li>Summaries, key points, simple explanations and timestamped sections.</li><li>RAG chat using embeddings and FAISS search.</li><li>Whisper fallback when captions are missing, multilingual output and caching.</li></ul>
+<div class="row"><a class="btn sm primary" href="https://github.com/kashvi-b/AI-Video-Summarization" target="_blank" rel="noopener noreferrer" aria-label="View AI Video Summarizer Pro code on GitHub (opens in new tab)">View code</a></div></article>
+
+<article class="card"><h3>Customer churn prediction</h3>
+<p style="margin-top:var(--s1)">End-to-end churn pipeline on the IBM Telco dataset, with SHAP explainability, a Streamlit business dashboard and a FastAPI prediction endpoint.</p>
+<ul class="tags"><li>XGBoost</li><li>SHAP</li><li>Streamlit</li><li>FastAPI</li><li>MLflow</li></ul>
+<ul class="pts"><li>XGBoost reached 0.87 AUC-ROC on the held-out test set.</li></ul>
+<div class="row"><a class="btn sm primary" href="https://github.com/kashvi-b/Telco-churn-prediction" target="_blank" rel="noopener noreferrer" aria-label="View churn prediction code on GitHub (opens in new tab)">View code</a><a class="btn sm" href="https://telco-churn-prediction-kb.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Open churn prediction live demo (opens in new tab)">Live demo</a></div></article>
+
+<article class="card"><h3>MLOps engineering portfolio</h3>
+<p style="margin-top:var(--s1)">A spam classifier served as a REST API, with automated tests and continuous integration.</p>
+<ul class="tags"><li>TF-IDF</li><li>Logistic Regression</li><li>FastAPI</li><li>Uvicorn</li><li>Docker</li><li>Pytest</li><li>GitHub Actions</li></ul>
+<div class="row"><a class="btn sm primary" href="https://github.com/kashvi-b/mlops-engineering-portfolio" target="_blank" rel="noopener noreferrer" aria-label="View MLOps portfolio code on GitHub (opens in new tab)">View code</a></div></article>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div class="tl"><h3>Software Developer Intern, Tanituts</h3>
+<p class="meta">Chandigarh, India | June 2025 to July 2025</p>
+<ul class="pts"><li>Developed and shipped job-listing, application, search and authentication modules for a live job portal.</li><li>Worked in a cross-functional Agile team.</li><li>Ran debugging, testing and data-validation cycles, and documented changes for production-ready features.</li></ul></div>
+</div></section>
+
+<section id="certifications"><div class="wrap certs">
+<h2>Certifications</h2>
+<div class="grid">
+<div class="card"><b>SAP Certified Data Analyst</b><span>SAP Analytics Cloud, April 2026</span></div>
+<div class="card"><b>NPTEL Elite Certification</b><span>Business Intelligence and Analytics, IIT Madras, January to April 2026</span></div>
+<div class="card"><b>Machine Learning Specialization</b><span>DeepLearning.AI / Coursera, March 2026</span></div>
+<div class="card"><b>Deloitte Data Analytics Job Simulation</b><span>Forage, March 2026</span></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact">
+<h2>Get in touch</h2>
+<p class="lead">I'm open to data science, analytics and ML/AI engineering roles, and to collaborating on projects. Email is the fastest way to reach me.</p>
+<div class="row" style="margin-top:var(--s3)">
+<a class="btn primary" href="mailto:kashvi.bhardwaj1234@gmail.com?subject=Hello%20Kashvi">Email me</a>
+<a class="btn" href="https://linkedin.com/in/kashvi-bhardwaj" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn" href="https://github.com/kashvi-b" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="assets/resume.pdf" download>Download resume</a>
+</div>
+<p style="margin-top:var(--s3)">kashvi.bhardwaj1234@gmail.com | <a class="link" href="tel:+916374876637">+91-6374876637</a> | Chennai, India</p>
+</div></section>
+</main>
+<footer><div class="wrap">Kashvi Bhardwaj. Built with HTML, CSS and JavaScript.</div></footer>
+
+<script>
+(function(){
+var GPA="9.11";
+document.querySelectorAll("[data-gpa]").forEach(function(e){e.textContent=GPA});
+var btn=document.getElementById("menu"),ul=document.getElementById("links");
+btn.addEventListener("click",function(){var o=ul.classList.toggle("open");btn.setAttribute("aria-expanded",o)});
+ul.addEventListener("click",function(e){if(e.target.tagName==="A"){ul.classList.remove("open");btn.setAttribute("aria-expanded","false")}});
+var roles=["Data Scientist","AI Engineer","ML Developer"],el=document.getElementById("role");
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+var i=0,c=0,del=false;
+(function tick(){var w=roles[i];c+=del?-1:1;el.textContent=w.slice(0,c);var t=del?40:90;
+if(!del&&c===w.length){del=true;t=1400}else if(del&&c===0){del=false;i=(i+1)%roles.length;t=300}
+setTimeout(tick,t)})();
+}else{el.textContent=roles.join(" | ")}
+var links=[].slice.call(document.querySelectorAll("#links a"));
+if("IntersectionObserver" in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");if(a.getAttribute("href")==="#"+e.target.id)a.setAttribute("aria-current","true")})}})},{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("main section[id]").forEach(function(s){io.observe(s)});
+}
+})();
+</script>
+</body>
+</html>
